@@ -2,7 +2,7 @@ Package.describe({
     name: 'koleok:ss-activewear-api',
     summary: "SS-Activewear garment supplier API wrapper for meteor",
     version: "1.0.0",
-    git: "https://github.com/Koleok/ss-activewear-api.git"
+    git: "https://github.com/Koleok/ss-activewear-api"
 });
 
 Npm.depends({});
