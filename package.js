@@ -2,23 +2,23 @@ Package.describe({
     name: 'koleok:ss-activewear-api',
     summary: "SS-Activewear garment supplier API wrapper for meteor",
     version: "1.0.0",
-    git: "https://github.com/Koleok/ss-activewear-api"
+    git: "https://github.com/Koleok/ss-activewear-api",
+    documentation: "README.md"
 });
 
-Npm.depends({});
-
 Package.onUse(function (api) {
-    api.versionsFrom('METEOR@0.9.3.1');
+    // Meteor releases below this version are not supported
+    api.versionsFrom("1.2.0.1");
 
+    // Core packages and 3rd party packages
     api.use(
-        ['underscore', 'ecmascript'], ['client', 'server']
+        ['underscore', 'ecmascript', 'http'], ['client', 'server']
     );
 
-    api.addFiles(
-        ['client.js', 'server.js', 'SS_Api.js']
-    );
+    // The files of this package
+    api.addFiles('client.js', 'client');
+    api.addFiles('server.js', 'server');
 
-    api.export(
-        ['SS_Api'], ['client', 'server']
-    );
+    // The variables that become global for users of your package
+    api.export('ss');
 });
