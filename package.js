@@ -12,11 +12,10 @@ Package.onUse(function (api) {
 
     // Core packages and 3rd party packages
     api.use(
-        ['underscore', 'ecmascript', 'http'], ['client', 'server']
+        ['underscore', 'ecmascript', 'http'], ['server']
     );
 
     // The files of this package
-    api.addFiles('client.js', 'client');
     api.addFiles('server.js', 'server');
 
     // The variables that become global for users of your package
